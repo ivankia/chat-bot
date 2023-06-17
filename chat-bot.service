@@ -6,6 +6,8 @@ User=root
 WorkingDirectory=/root/chat-bot
 ExecStart=node main.js
 Restart=always
+StandardOutput=append:/root/chat-bot.log
+StandardError=append:/root/chat-bot-error.log
 
 [Install]
 WantedBy=multi-user.target
