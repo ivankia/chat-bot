@@ -72,7 +72,7 @@ function startListener() {
           const sig = signal.split(' ');
 
           request.post(
-              API_SIGNAL, { json: {
+              process.env.API_SIGNAL, { json: {
                   symbol: sig[0],
                   side: sig[3] === 'шорт' ? 'SHORT' : 'LONG',
                   price: sig[2],
