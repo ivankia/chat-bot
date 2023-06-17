@@ -1,0 +1,11 @@
+[Unit]
+Description=Chat bot
+
+[Service]
+User=root
+WorkingDirectory=/root/chat-bot
+ExecStart=node main.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
