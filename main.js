@@ -5,8 +5,6 @@ const path = require('path');
 const request = require('request');
 require('dotenv').config();
 
-console.log();
-
 const api_id = process.env.API_ID;
 const api_hash = process.env.API_HASH;
 const phone = process.env.PHONE;
@@ -54,7 +52,6 @@ function startListener() {
     for (const message of newChannelMessages) {
       // printing new channel messages
       if (channelId === message.peer_id.channel_id) {
-        // console.log(`[${message.peer_id.channel_id}] ${message.message}`);
         const matches = message.message.match(/[A-Za-z0-9]+\s(ниже|выше)\s(\d+\.?\d+)\s(шорт|лонг)/g);
 
         // console.log(matches);
