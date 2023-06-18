@@ -45,7 +45,7 @@ const mtproto = new MTProto({
 });
 
 function startListener() {
-  console.log('[+] starting listener')
+  console.log(new Date() + ' [+] starting listener')
   mtproto.updates.on('updates', async ({updates}) => {
     const newChannelMessages = updates.filter((update) => update._ === 'updateNewChannelMessage').map(({message}) => message) // filter `updateNewChannelMessage` types only and extract the 'message' object
 
