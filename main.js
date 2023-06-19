@@ -57,7 +57,7 @@ function startListener() {
         // console.log(matches);
         // continue;
 
-        if (matches.length) {
+        if (matches?.length) {
           request.post(process.env.API_CLOSE, {}, function (error, response, body) {
             if (!error && response.statusCode == 200) {
               console.log(body);
