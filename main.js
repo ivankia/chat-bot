@@ -65,7 +65,7 @@ function startListener() {
           });
         }
 
-        matches.forEach(signal => {
+        matches?.forEach(signal => {
           const sig = signal.split(' ');
 
           request.post(
